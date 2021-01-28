@@ -1,4 +1,35 @@
-h1 {
-  font-family: $primary-font;
+// h1 {
+//   font-family: $primary-font;
+//   font-style: normal;
+// }
+
+.page-footer {
+  padding-top: 65px;
+  background-color: #fff5f6;
+}
+
+.page-footer .subtitle {
+  font-family: Titan One;
   font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: uppercase;
+
+  color: #ffa5ba;
+}
+
+.page-footer .title {
+}
+
+.page-footer .link-container {
+}
+
+.page-footer .contact {
+}
+
+.page-footer .copyright-container {
+}
+
+.page-footer .copyright {
 }
