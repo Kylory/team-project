@@ -1,4 +1,102 @@
-h1 {
-  font-family: $primary-font;
-  font-style: normal;
+// header {
+//   font-family: $secondary-font, sans-serif;
+//   font-style: normal;
+// }
+
+.page-header {
+  // position: absolute;
+  background-color: $secondary-color;
+  width: 100%;
+}
+
+.page-header img {
+  min-width: 0;
+}
+
+.page-header .position {
+  // position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 62px;
+}
+
+.page-header .logo {
+  display: flex;
+  align-items: center;
+}
+
+.page-header .logo-text {
+  margin-left: 20px;
+  font-family: 'Titan One', sans-serif;
+  font-size: 22px;
+  line-height: 25px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: $accent-color;
+}
+
+//! Button
+.button-menu {
+  display: inline-flex;
+  padding: 12px 8px;
+  border: none;
+  background-color: transparent;
+  // fill: #fff;
+
+  // transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  // &:hover,
+  // &:focus {
+  //   fill: $hoverColor;
+  // }
+
+  @media screen and (min-width: 1200px) {
+    display: none;
+  }
+}
+
+.button-menu .icon-close {
+  display: none;
+}
+
+.button-menu.is-open .icon-close {
+  display: block;
+}
+
+.button-menu.is-open .icon-menu {
+  display: none;
+}
+
+.menu-container {
+  display: none;
+  text-align: center;
+
+  &.is-open {
+    display: block;
+    z-index: 999;
+  }
+
+  @media screen and (max-width: 767px) {
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 60px 0;
+
+    width: 100%;
+    height: 393px;
+    background-color: #fff;
+
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+      0px 1px 3px rgba(0, 0, 0, 0.16);
+  }
+
+  // @media screen and (min-width: 768px) {
+  //   display: flex;
+  //   width: 100%;
+  // }
 }
