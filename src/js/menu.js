@@ -23,3 +23,17 @@
     mobileMenuRef.classList.toggle("is-open");
   });
 })();
+
+(() => {
+  const refs = {
+    lockOverflowBtn: document.querySelector('[data-lock]'),
+    unlockOverflowBtn: document.querySelector('[data-unlock]'),
+  };
+
+  refs.lockOverflowBtn.addEventListener('click', toggleModal);
+  refs.unlockOverflowBtn.addEventListener('click', toggleModal);
+
+  function toggleModal() {
+    document.body.classList.toggle("lock");
+  }
+})();
