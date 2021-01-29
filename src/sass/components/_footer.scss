@@ -48,10 +48,36 @@
 
 .page-footer .list .item {
   display: flex;
+  justify-content: center;
+  align-items: center;
 
   &:not(:last-child) {
     margin-right: 30px;
   }
+}
+
+.page-footer .link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 32px;
+  height: 32px;
+
+  border-radius: 50%;
+  background-color: $secondary-color;
+  fill: #fff;
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.page-footer .link:hover,
+.page-footer .link:focus {
+  fill: $accent-color;
+  transform: scale(1.5);
+  background-color: #fff;
 }
 
 .page-footer .contact {
@@ -75,6 +101,9 @@
 }
 
 .page-footer .copyright {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 145px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.52;
