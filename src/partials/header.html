@@ -6,7 +6,7 @@
         <span class="logo-text">icecream</span>
       </a>
 
-      <div class="menu-container" id="menu-container" data-menu>
+      <div class="navigation-container">
         <ul class="list">
           <li class="item">home</li>
           <li class="item">about us</li>
@@ -15,17 +15,16 @@
           <li class="item">contact</li>
         </ul>
 
-        <button>buy now
+        <button class="button-buy">buy now
           <svg width="5" height ="8">
             <use class="icon-embed" href="./images/sprite.svg#icon-embed"></use>
           </svg>
         </button>
       </div>
     </nav>
-    <button class="button-menu" type="button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
-      <svg width="20" height="12" aria-label="Переключатель мобильного меню">
+    <button class="button-menu" type="button" aria-expanded="false" aria-controls="menu-container" data-menu-button data-lock>
+      <svg class="icon" width="20" height="12" aria-label="Переключатель мобильного меню">
         <use class="icon-menu" href="./images/sprite.svg#icon-burger"></use>
-        <use class="icon-close" href="./images/sprite.svg#icon-close"></use>
       </svg>
     </button>
   </div>
