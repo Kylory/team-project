@@ -112,3 +112,127 @@
 
   color: #907e82;
 }
+
+//! Mobile menu
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  opacity: 0;
+  pointer-events: none;
+  z-index: 960;
+  overflow-y: scroll;
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu.is-open {
+  opacity: 1;
+  pointer-events: initial;
+}
+
+.mobile-menu .content {
+  margin-left: auto;
+  padding: 20px;
+
+  width: 250px;
+  height: 100%;
+
+  background-color: #e17992;
+
+  transform: translateX(+100%);
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu.is-open .content {
+  transform: translateX(0);
+}
+
+.mobile-menu .button-menu {
+  display: inline-flex;
+  padding: 12px 8px;
+  border: none;
+  background-color: transparent;
+  // fill: #fff;
+
+  // transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  // &:hover,
+  // &:focus {
+  //   fill: $hoverColor;
+  // }
+
+  @media screen and (min-width: 1200px) {
+    display: none;
+  }
+}
+
+.mobile-menu .list {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-menu .list .item {
+  display: flex;
+  flex-direction: column;
+
+  border-bottom: 1px solid #e18298;
+
+  &:first-child {
+    border-top: 1px solid #e18298;
+  }
+}
+
+.mobile-menu .link {
+  padding: 12px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.3;
+
+  color: #ffffff;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu .link:hover,
+.mobile-menu .link:focus {
+  color: #d41443;
+}
+
+.mobile-menu .button-buy {
+  margin-top: 21px;
+  margin-bottom: 21px;
+  padding: 14px 55px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 210px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31;
+  // fill: blue;
+
+  color: $accent-color;
+  background-color: #fff;
+  border: none;
+  border-radius: 22px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu .button-buy:hover,
+.mobile-menu .button-buy:focus {
+  background-color: $accent-color;
+  color: #fff;
+  transform: scale(1.05);
+}
