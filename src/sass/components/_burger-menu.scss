@@ -78,7 +78,7 @@ body.lock {
 }
 
 .mobile-menu .link {
-  padding: 12px;
+  padding: 12px 25px;
 
   font-weight: 700;
   font-size: 14px;
@@ -96,7 +96,6 @@ body.lock {
 }
 
 .mobile-menu .button-buy {
-  // margin-top: 61px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 21px;
@@ -105,12 +104,11 @@ body.lock {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 210px;
+  width: 200px;
 
   font-weight: 700;
   font-size: 16px;
   line-height: 1.31;
-  // fill: blue;
 
   stroke: currentColor;
   color: $accent-color;

@@ -3,6 +3,17 @@
   background-color: #fff5f6;
 }
 
+.page-footer .position {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    padding-bottom: 91px;
+    height: 280px;
+  }
+}
+
 .page-footer .subtitle {
   max-width: 232px;
   margin-bottom: 20px;
@@ -13,6 +24,12 @@
   text-transform: uppercase;
 
   color: #ffa5ba;
+
+  @media screen and (min-width: 768px) {
+    font-size: 26px;
+    line-height: 1.15;
+    letter-spacing: 0.04em;
+  }
 }
 
 .page-footer .title {
@@ -27,6 +44,14 @@
   text-transform: uppercase;
 
   color: $accent-color;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+
+    font-size: 48px;
+    line-height: 1.15;
+    letter-spacing: 0.06em;
+  }
 }
 
 .page-footer .link-container {
@@ -84,6 +109,10 @@
   font-size: 12px;
   line-height: 1.86;
   text-align: right;
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+  }
 }
 
 .page-footer .contact-number {
@@ -108,4 +137,8 @@
   text-align: center;
 
   color: #907e82;
+
+  @media screen and (min-width: 768px) {
+    max-width: 100%;
+  }
 }

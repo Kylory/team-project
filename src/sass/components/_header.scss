@@ -9,12 +9,15 @@
 }
 
 .page-header .position {
-  // position: relative;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 62px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 35px;
+    height: 85px;
+  }
 }
 
 .page-header .logo {
@@ -43,6 +46,17 @@
 }
 
 //! Button
+.page-header .tablet-pos {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 210px;
+    height: 50px;
+  }
+}
+
 .page-header .button-menu {
   display: inline-flex;
   padding: 0;
@@ -61,6 +75,45 @@
   // @media screen and (min-width: 1200px) {
   //   display: none;
   // }
+}
+
+.page-header .button-buy {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    // margin-left: auto;
+    // margin-right: auto;
+    // margin-bottom: 21px;
+    padding: 14px 38px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 160px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.31;
+
+    stroke: currentColor;
+    color: $accent-color;
+    background-color: #fff;
+    border: none;
+    border-radius: 22px;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.page-header .button-buy:hover,
+.page-header .button-buy:focus {
+  background-color: $accent-color;
+  color: #fff;
+  transform: scale(1.05);
+  stroke: currentColor;
 }
 
 // .page-header .menu-container {
