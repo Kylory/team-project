@@ -11,25 +11,29 @@
   letter-spacing: 0.04em;
   padding-top: 193px;
 
-  background-image: url('../images/hero/icecream-hero.svg'),
-    url('../images/hero/Ellipse 3.svg');
+  background-image: url('../images/hero/icecream-mobile.png'),
+    url('../images/hero/ellipse-mobile.png');
   background-repeat: no-repeat;
-  background-position: right 32px bottom, bottom 75px left 36px;
-  background-size: 171px 410px, 348px 344px;
+  background-position: right 32px bottom, right;
+  background-size: 171px 410px, 284px 344px;
 
   @media screen and (min-width: 768px) {
     height: 399px;
     padding-top: 102px;
-    background-position: right 247px bottom, bottom 46px right 137px;
-    background-size: 143px 336px, 324px 322px;
+    background-image: url('../images/hero/icecream-tablet.png'),
+      url('../images/hero/girl-tablet.png'),
+      url('../images/hero/ellipse-tablet.png'),
+      url('../images/hero/milk-tablet.png'),
+      url('../images/hero/ellipse-small-tablet.png'),
+      url('../images/hero/ellipse-small-tablet.png');
+    background-repeat: no-repeat;
+    background-position: right 247px bottom, bottom right 34px,
+      right 137px bottom 46px, left 34px bottom 28px, right top 94px,
+      right top 151px;
+    background-size: 143px 336px, 168px 133px, 324px 322px, 124px 126px,
+      16px 16px, 16px 16px;
   }
 }
-
-// .icecream {
-//   position: absolute;
-//   width: 171px;
-//   height: 410px;
-// }
 
 .hero .title {
   font-weight: 400;
@@ -73,13 +77,23 @@
 
 .button-products {
   color: $white-color;
-  background: $accent-color;
+  background-color: $accent-color;
   margin-right: 8px;
+
+  &:hover {
+    color: $accent-color;
+    background-color: $white-color;
+  }
 }
 
 .button-how-its-made {
   color: $accent-color;
   background-color: $white-color;
+
+  &:hover {
+    color: $white-color;
+    background-color: $accent-color;
+  }
 }
 
 .bio-eco-discription {
@@ -87,6 +101,8 @@
     display: none;
   }
 
+  margin-top: 66px;
+  margin-left: 120px;
   width: 121px;
 
   font-family: DM Sans;
