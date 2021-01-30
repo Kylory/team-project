@@ -1,6 +1,6 @@
 .locations {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   background-image: linear-gradient(
     to bottom,
     $white-color 7%,
@@ -17,14 +17,20 @@
     rgba(255, 245, 246, 1) 15%,
     rgba(255, 245, 246, 1) 86%); 
 }
-  }
 
-.locations.container {
-  background-image: url('../images/locations/locationsbg2.svg');
-  background-repeat: no-repeat;
-  background-position: 0px, 15%;
-  background-size: 1280px 382px; 
+@media screen and (min-width: 1200px) {
+  background-image: url('../images/locations/locationsbg2.svg'), linear-gradient(
+    to bottom,
+    $white-color 15%,
+    rgba(255, 245, 246, 1) 15%,
+    rgba(255, 245, 246, 1) 86%);  
+
+background-repeat: no-repeat;
+  background-position: 0, 15%;
+  background-size: contain;
+  width: 100%;
 }
+  }
 
 .locations h2 {
   visibility: hidden;
@@ -196,7 +202,7 @@
 @media screen and (min-width: 1200px) {
     font-size: 16px;  
       }      
-  }
+}
 
 .working-hours.last-item {
   display: inline-block;
@@ -232,8 +238,8 @@
   @media screen and (min-width: 1200px) {
       font-size: 16px;  
       }  
-       }
-     } 
+    }
+} 
 
 .locations .buttons {
   display: flex;
