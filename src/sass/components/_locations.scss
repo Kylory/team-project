@@ -1,4 +1,6 @@
 .locations {
+  position: relative;
+  z-index: 1;
   background-image: linear-gradient(
     to bottom,
     $white-color 7%,
@@ -7,11 +9,27 @@
       width: 100%;
   max-height: 100%;
   padding-bottom: 48px;
-  
+
+@media screen and (min-width: 768px) {
+  background-image: linear-gradient(
+    to bottom,
+    $white-color 15%,
+    rgba(255, 245, 246, 1) 15%,
+    rgba(255, 245, 246, 1) 86%); 
+}
   }
 
 .locations h2 {
   visibility: hidden;
+}
+
+.locations .list {
+  @media screen and (min-width: 768px) {
+    display: flex; 
+    flex-wrap: wrap;
+    margin-left: -20px;
+    justify-content: center; 
+  } 
 }
 
 .locations .item {
@@ -25,13 +43,20 @@
  &:not(:last-child) {
    margin-bottom: 20px;
  }
-
- @media screen and (min-width: 320px) {
+@media screen and (min-width: 320px) {
   width: 220px;
     }  
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   width: 220px;
-  padding: 50px 32px 50px 31px;   
+  margin-left: 20px;
+  margin-right: 0px;
+  padding: 50px 32px 50px 31px;
+  &:not(:last-child) {
+    margin-bottom: 0px; 
+}
+}
+@media screen and (min-width:1200px) {
+  width: 330px; 
 }
 }
 .locations h3, h4 {
@@ -53,6 +78,9 @@
   text-transform: uppercase;
   letter-spacing: 0.04em;
   max-width: 80px; 
+@media screen and (min-width: 768px) {
+  font-size: 16px;  
+  }  
 }
 
 .title.truck {
@@ -70,32 +98,47 @@
   text-transform: uppercase;
   letter-spacing: 0.04em;
   background-color: #C2E297;  
-  max-width: 130px; 
+  max-width: 130px;
+@media screen and (min-width: 768px) {
+    font-size: 16px;  
+    }   
 }
 
 .city {
-margin-bottom: 25px;  
+  margin-bottom: 25px;  
 }
 .city-title {
-display: block;
-margin-bottom: 10px;
-font-family: $secondary-color;
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 1.8;
-letter-spacing: 0.04em;  
+  display: block;
+  margin-bottom: 10px;
+  font-family: $secondary-color;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.8;
+  letter-spacing: 0.04em; 
+@media screen and (min-width: 768px) {
+    font-size: 14px;  
+    }
+@media screen and (min-width: 1200px) {
+    font-size: 16px;  
+    }      
   }
 
 .city .text {
   display: inline-block;
   position: relative;
-color: $some-color;
-font-family: $secondary-font;
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 1.5;
+  color: $some-color;
+  font-family: $secondary-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.5;
+@media screen and (min-width: 768px) {
+    font-size: 14px;  
+    }  
+@media screen and (min-width: 1200px) {
+    font-size: 16px;  
+    }    
 
 &::after {
   position: absolute;
@@ -115,48 +158,60 @@ line-height: 1.5;
 }
 
 .working-time-item:first-child {
-margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .locations .working-days {
-font-family: $secondary-font;
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 1.8; 
+  font-family: $secondary-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.8;
+@media screen and (min-width: 768px) {
+    font-size: 14px;  
+    }
+@media screen and (min-width: 1200px) {
+    font-size: 16px;  
+    }      
 }
 
 .working-hours {
   display: block;
-font-family: $secondary-font;
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 1.8;  
-color: $secondary-color;
+  font-family: $secondary-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.8;  
+  color: $secondary-color;
+@media screen and (min-width: 768px) {
+    font-size: 14px;  
+    }
+@media screen and (min-width: 1200px) {
+    font-size: 16px;  
+      }      
   }
 
-  .working-hours.last-item {
-    display: inline-block;
-    position: relative;
+.working-hours.last-item {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+
+  &::after {
+    position: absolute;
+    display: block;
+    content:'';
     width: 100%;
-
-    &::after {
-      position: absolute;
-        display: block;
-        content:'';
-        width: 100%;
-        height: 1px;
-        background: #E1E1E1;
-        border-radius: 2px;
-        margin-top: 25px;
-      }
-  }
-
-  .locations .contacts {
+    height: 1px;
+    background: #E1E1E1;
+    border-radius: 2px;
     margin-top: 25px;
+      }
+}
+
+.locations .contacts {
+  margin-top: 25px;
     
-       & a {     
+  & a {     
     font-family: $secondary-font;
     font-style: normal;
     font-weight: 500;
@@ -164,92 +219,116 @@ color: $secondary-color;
     line-height: 1.5;
     color: $some-color;
     cursor: pointer;
+    @media screen and (min-width: 768px) {
+      font-size: 14px;  
+      }
+  @media screen and (min-width: 1200px) {
+      font-size: 16px;  
+      }  
        }
      } 
 
-  .locations .buttons {
-    display: flex;
-    margin-top: 54px;
-    flex-direction: column; 
+.locations .buttons {
+  display: flex;
+  margin-top: 54px;
+  flex-direction: column;
+
+@media screen and (min-width: 768px) {
+    margin-top: 81px;
+    flex-direction: row;
+    justify-content: center; 
+  }
   }
   
-   .button {
-    margin-left: auto;
-    margin-right: auto;
-    align-items: center;
-    text-align: center;
-    font-family: $secondary-font;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.3;
-    border-radius: 22px;
-    border: none;
-    cursor: pointer;
+.button {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-family: $secondary-font;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.3;
+  border-radius: 22px;
+  border: none;
+  cursor: pointer;
 
-    @media screen and (min-width: 320px) {
-      min-width: 161px;
+@media screen and (min-width: 320px) {
+  min-width: 161px;
         }  
 
-      // @media screen and (min-width: 768px) {
-      // width: 191px;
-      // flex-direction: row;
-      // padding: 50px 32px 50px 31px;   
+@media screen and (min-width: 768px) {
+  min-width: 191px;  
+  margin-left: 0px;
+  margin-right: 0px; 
     }
-    .button.control {
-      position: relative;
-      padding: 14px 29.45px 13px 17px;
-      padding-right: 29.45px;
-      padding-left: 17px;
-      background-color: $accent-color;
-      color: $white-color;
-      margin-bottom: 10px;
-      transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-      color 250ms cubic-bezier(0.4, 0, 0.2, 1);   
-  
-      & .icon-embed {
-        display: block;
-        position: absolute;
-        fill: currentColor;
-        right: 17.84px;
-        top: 19px;
-        margin-left: 8px;
+  }
 
-      }
-      &:hover,
-      &:focus {
-        background-color: $white-color;
-        color: $accent-color;
-      }
+.button.control {
+  position: relative;
+  padding: 14px 29.45px 13px 17px;
+  padding-right: 29.45px;
+  padding-left: 17px;
+  background-color: $accent-color;
+  color: $white-color;
+  stroke: $white-color;
+  margin-bottom: 10px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);   
 
-    }
+@media screen and (min-width: 768px) {
+  padding: 14px 34.77px 13px 30px; 
+  margin-right: 14.5px;
+  margin-bottom: 0px;  
+      } 
+
+  & .icon-embed {
+    display: block;
+    position: absolute;
+    fill: currentColor;
+    right: 21px;
+    top: 21px;
+    margin-left: 8px;
+      }
+  &:hover,
+  &:focus {
+      background-color: $white-color;
+      color: $accent-color;
+      transform: scale(1.05);
+      stroke: $accent-color;
+      }
+ }
       
-      .button.franchise {
-        position: relative;
-        padding: 14px 48.75px 13px 32px;
-        background-color: $white-color;
-        color: $accent-color ;
-        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-      color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.button.franchise {
+    position: relative;
+    padding: 14px 48.75px 13px 32px;
+    background-color: $white-color;
+    color: $accent-color;
+    stroke: $accent-color;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-        &:hover,
-        &:focus {
-          background-color: $accent-color;
-          color: $white-color;
+@media screen and (min-width: 768px) {
+    padding: 14px 38.63px 13px 37.71px;  
+        }
+
+  & .icon-embed {
+    display: block;
+    position: absolute;
+    fill: currentColor;
+    right: 21px;
+    top: 21px;
+    margin-left: 8px;
+    }
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    color: $white-color;
+    stroke: $white-color;
+    transform: scale(1.05);
         }
     }
-
-    .locations .icon-embed {
-          display: block;
-          position: absolute;
-          fill: currentColor;
-          right: 17.84px;
-          top: 19px;
-          margin-left: 8px;
-        }
-  
-
-    
-
-
-
