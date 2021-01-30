@@ -2,3 +2,115 @@ h1 {
   font-family: $primary-font;
   font-style: normal;
 }
+
+.products {
+  text-align: center;
+  margin-bottom: 98px;
+  &-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 24px;
+    margin-bottom: 165px;
+
+    &:nth-last-child(1) {
+      margin-bottom: 0;
+    }
+  }
+  &-title {
+    font-family: 'Titan One';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.16;
+    color: $secondary-color;
+    margin-bottom: 15px;
+  }
+  &-name {
+    display: block;
+    font-family: 'Titan One';
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 1.14;
+    letter-spacing: 0.04em;
+    color: $accent-color;
+
+    margin-bottom: 140px;
+  }
+  &-kinds {
+    font-family: 'Titan One';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: 0.04em;
+    color: $white-color;
+    margin-bottom: 30px;
+
+    text-align: center;
+  }
+  &-text {
+    font-family: 'DM Sans';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: $white-color;
+
+    margin-bottom: 30px;
+  }
+  &-img {
+    margin-top: -130px;
+    margin-bottom: 22px;
+  }
+  &-description {
+    padding: 0 40px 0;
+  }
+  &-link {
+    background: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin-bottom: 41px;
+  }
+  &-svg {
+    width: 20px;
+    height: 10px;
+    margin-bottom: 30px;
+  }
+  &-svglink {
+    width: 15px;
+    height: 40px;
+    fill: $accent-color;
+  }
+}
+.pink {
+  background-color: #ffb8ca;
+}
+.biege {
+  background-color: #f0d1a5;
+}
+.green {
+  background-color: #c2e297;
+}
+@media screen and (min-width: 768px) {
+  .products {
+    &-list {
+      display: flex;
+    }
+    &-item {
+      width: calc((100% - 40px) / 3);
+      margin: 20px;
+
+      &:nth-last-child(1) {
+        margin: auto;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .products {
+    &-item {
+      width: calc((100% - 60px) / 3);
+      margin: 30px;
+    }
+  }
+}
