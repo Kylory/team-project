@@ -19,6 +19,13 @@
 }
   }
 
+.locations.container {
+  background-image: url('../images/locations/locationsbg2.svg');
+  background-repeat: no-repeat;
+  background-position: 0px, 15%;
+  background-size: 1280px 382px; 
+}
+
 .locations h2 {
   visibility: hidden;
 }
