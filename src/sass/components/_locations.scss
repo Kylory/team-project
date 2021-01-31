@@ -1,6 +1,6 @@
 .locations {
   position: relative;
-  z-index: 2;
+  // z-index: 2;
   background-image: linear-gradient(
     to bottom,
     $white-color 7%,
@@ -18,24 +18,34 @@
     rgba(255, 245, 246, 1) 86%); 
 }
 
-@media screen and (min-width: 1200px) {
-    background-image: url('../images/locations/locationsbg2@1x.png'), linear-gradient(
-      to bottom,
-      $white-color 15%,
-      rgba(255, 245, 246, 1) 15%,
-      rgba(255, 245, 246, 1) 86%);  
+// @media screen and (min-width: 1280px) {
+//     background-image: url('), linear-gradient(
+//       to bottom,
+//       $white-color 15%,
+//       rgba(255, 245, 246, 1) 15%,
+//       rgba(255, 245, 246, 1) 86%);  
   
-    background-repeat: no-repeat;
-    background-position: 0, 15%;
-    background-size: contain;
-    width: 100%;
-  @media screen and (min-device-pixel-ratio: 2), 
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
-    background-image: url('../images/locations/locationsbg2@2x.png')
-        }
+//     background-repeat: no-repeat;
+//     background-position: 0, 15%;
+//     background-size: contain;
+//     width: 100%;
+//   @media screen and (min-device-pixel-ratio: 2), 
+//     screen and (min-resol'../images/locations/locationsbg2@1x.pngution: 192dpi),
+//     screen and (min-resolution: 2dppx) {
+//     background-image: url('../images/locations/locationsbg2@2x.png')
+//         }
+//   }
   }
+  .second-background {
+  @media screen and (max-width: 1279px) {
+    display: none;
   }
+  @media screen and (min-width: 1280px){
+    position: absolute;
+    top: 102px;
+    object-fit: cover;
+    max-width: 1280px;
+  }}
 
 .locations h2 {
   visibility: hidden;
@@ -73,7 +83,7 @@
     margin-bottom: 0px; 
 }
 }
-@media screen and (min-width:1200px) {
+@media screen and (min-width:1280px) {
   width: 330px; 
 }
 }
@@ -137,7 +147,7 @@
 @media screen and (min-width: 768px) {
     font-size: 14px;  
     }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
     font-size: 16px;  
     }      
   }
@@ -154,7 +164,7 @@
 @media screen and (min-width: 768px) {
     font-size: 14px;  
     }  
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
     font-size: 16px;  
     }    
 
@@ -188,7 +198,7 @@
 @media screen and (min-width: 768px) {
     font-size: 14px;  
     }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
     font-size: 16px;  
     }      
 }
@@ -204,7 +214,7 @@
 @media screen and (min-width: 768px) {
     font-size: 14px;  
     }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
     font-size: 16px;  
       }      
 }
@@ -240,7 +250,7 @@
     @media screen and (min-width: 768px) {
       font-size: 14px;  
       }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
       font-size: 16px;  
       }  
     }
