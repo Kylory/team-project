@@ -1,20 +1,28 @@
 <header class="page-header">
   <div class="container position">
-    <nav class="navigation">
       <a class="logo" href="./index.html">
         <img src="./images/logo.png" alt="logo">
         <span class="logo-text">icecream</span>
       </a>
 
-      <div class="navigation-container">
-        <ul class="list">
-          <li class="item">home</li>
-          <li class="item">about us</li>
-          <li class="item">how it's made?</li>
-          <li class="item">our products</li>
-          <li class="item">contact</li>
-        </ul>
-      </div>
+    <nav id="navigation" class="navigation">
+      <ul class="navigation-list">
+        <li class="item">
+          <a class="link" href="#hero">Home</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#products">About us</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#made-section">How it's made?</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#locations">Our products</a>
+        </li>
+        <li class="item">
+          <a class="link" href="#page-footer">Contact</a>
+        </li>
+      </ul>
     </nav>
     <div class="tablet-pos">
       <button class="button-menu" type="button" aria-expanded="false" aria-controls="menu-container" data-menu-button data-lock>
@@ -29,4 +37,11 @@
       </button>
     </div>
   </div>
+
+  <button class="button-scrollup" type="button">
+    <svg class="icon-up" width="30" height="30">
+      <use class="icon-embed" href="./images/sprite.svg#icon-embed"></use>
+    </svg>
+  </button>
+
 </header>
