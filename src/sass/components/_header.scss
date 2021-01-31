@@ -37,15 +37,39 @@
 }
 
 //! Navigation
-.page-header .navigation-container {
+.page-header .navigation {
   display: none;
+
+  @media screen and (min-width: 1280px) {
+    display: block;
+  }
 }
 
-.page-header .button-buy {
-  display: inline-block;
+.page-header .navigation-list {
+  display: flex;
 }
 
-//! Button
+.navigation-list .item {
+  &:not(:last-child) {
+    margin-right: 35px;
+  }
+}
+
+.navigation-list .link {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.3;
+
+  color: #ffffff;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navigation-list .link:hover {
+  color: $accent-color;
+}
+
+//! Buttons
 .page-header .tablet-pos {
   @media screen and (min-width: 768px) {
     display: flex;
@@ -72,18 +96,15 @@
     stroke: #fff;
   }
 
-  // @media screen and (min-width: 1200px) {
-  //   display: none;
-  // }
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
 }
 
 .page-header .button-buy {
   display: none;
 
   @media screen and (min-width: 768px) {
-    // margin-left: auto;
-    // margin-right: auto;
-    // margin-bottom: 21px;
     padding: 14px 38px;
 
     display: flex;
@@ -106,6 +127,10 @@
       transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
       stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
+
+  @media screen and (min-width: 1280px) {
+    margin-left: auto;
+  }
 }
 
 .page-header .button-buy:hover,
@@ -116,34 +141,38 @@
   stroke: currentColor;
 }
 
-// .page-header .menu-container {
-//   display: none;
-//   text-align: center;
+.button-scrollup {
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-//   &.is-open {
-//     display: flex;
-//     flex-direction: column-reverse;
-//     z-index: 999;
-//   }
+  position: fixed;
+  right: 10px;
+  bottom: 15px;
+  padding: 15px;
 
-//   @media screen and (max-width: 767px) {
-//     display: none;
+  width: 50px;
+  height: 50px;
 
-//     position: absolute;
-//     top: 100%;
-//     left: 0;
-//     padding: 60px 0;
+  background-color: $accent-color;
+  border: none;
+  border-radius: 50%;
 
-//     width: 100%;
-//     height: 393px;
-//     background-color: #fff;
+  stroke: #fff;
+  transform: rotate(270deg);
 
-//     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
-//       0px 1px 3px rgba(0, 0, 0, 0.16);
-//   }
+  transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-// @media screen and (min-width: 768px) {
-//   display: flex;
-//   width: 100%;
-// }
-// }
+  @media screen and (min-width: 768px) {
+    right: 40px;
+    bottom: 40px;
+  }
+}
+
+.button-scrollup:hover,
+.button-scrollup:focus {
+  stroke: $accent-color;
+  background-color: #fff;
+}
