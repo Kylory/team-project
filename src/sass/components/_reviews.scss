@@ -1,29 +1,71 @@
-.reviews {
-  padding: 0;
-  padding-bottom: 80px;
-  display: flex;
-  justify-content: center;
+img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .container {
-  max-width: 1200px;
-  margin-left: auto;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
   margin-right: auto;
+  margin-left: auto;
 }
 
-.img {
-  display: block;
-  max-width: 100%;
+.reviews-gallery {
+  padding-bottom: 80px;
+  display: flex;
+  justify-content: center;
+  @media screen and (min-width: 768px) {
+    padding-bottom: 121px;
+  }
+  @media screen and (min-width: 768px) {
+    background: linear-gradient(#fff5f6 30%, transparent 32%);
+  }
+}
+
+.gallery-desk {
+  display: inline-block;
+  width: 100%;
   height: auto;
 }
-/* слайдер */
+
+/* слайдерhh */
 
 .slider-section {
   padding-top: 80px;
   background-color: $white-color;
 }
+
+.slider-container {
+  @media screen and (min-width: 320px) {
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 100%;
+    padding-left: 34px;
+    padding-right: 34px;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
 .slider-list {
   width: 100%;
+  @media screen and (min-width: 768px) {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-right: 136px;
+    padding-left: 136px;
+  }
 }
 
 .slider-list-item {
@@ -38,6 +80,14 @@
     margin-bottom: 29px;
     background-repeat: no-repeat;
     background-position: center;
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 19px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 15px;
+    }
   }
 }
 
@@ -51,6 +101,17 @@
   padding: 43px 37px 6px 37px;
   margin-bottom: 30px;
   z-index: 1;
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    padding: 43px 42px 6px 62px;
+    margin-bottom: 24px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+    padding: 43px 10px 6px 90px;
+    margin-bottom: 15px;
+  }
 }
 
 .girl-1::before {
@@ -66,6 +127,16 @@
   background-image: url(../images/svg/slider99.svg);
   background-repeat: no-repeat;
   z-index: -1;
+
+  @media screen and (min-width: 768px) {
+    top: 30px;
+    left: 35px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    top: 40px;
+    left: 38px;
+  }
 }
 
 .slider-text-underline {
@@ -75,6 +146,24 @@
     #e1e1e1 0px 1px,
     transparent 1px 31px
   );
+
+  @media screen and (min-width: 768px) {
+    padding: 0;
+    background-image: repeating-linear-gradient(
+      to top,
+      #e1e1e1 0px 2px,
+      transparent 1px 35px
+    );
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 0;
+    background-image: repeating-linear-gradient(
+      to top,
+      #e1e1e1 0px 2px,
+      transparent 1px 47px
+    );
+  }
 }
 
 .slider-list-under {
@@ -83,6 +172,14 @@
   font-size: 14px;
   line-height: 1.86;
   color: rgba(0, 0, 0, 1);
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 20px;
+  }
 }
 
 .slider__radio-button--set-1,

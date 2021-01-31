@@ -1,11 +1,19 @@
-<section id="reviews" class="reviews container">
-  <picture class="images-test">
+<section id="reviews" class="reviews-gallery container">
+  <picture class="gallery-desk">
     <source
-      srcset="./images/mobile/galary.png 1x ./src/images/mobile/galary@2x.png 2x"
+      srcset="./images/mobile/galary.png 1x ./src/images/mobile/galary@x2.png 2x"
       media="(max-width:767px)"
     />
+    <source
+      srcset="./images/tablet/galary.png 1x ./src/images/tablet/galary@x2.png 2x"
+      media="(min-width:768px)"
+    />
+    <source
+      srcset="./images/galary.jpg 1x ./src/images/galary@x2.jpg 2x"
+      media="(min-width:1200px)"
+    />
 
-    <img src="./images/mobile/galary.png" alt="" />
+    <img src="./images/galary.jpg" alt="hop-hai-la-la-ley" />
   </picture>
 </section>
 
