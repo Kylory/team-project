@@ -1,4 +1,139 @@
-h1 {
+.made {
+  background-color: #fff5f6;
+
+  &-section {
+    padding-top: 125px;
+    padding-bottom: 145px;
+    @media screen and (min-width: 768px) {
+    padding-top: 130px;
+    padding-bottom: 242px;
+    }
+  }
+  &-pre-title {
+    font-family: $primary-font;
+    color: $secondary-color;
+    font-size: 18px;
+    line-height: 1.17;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    text-align: center;
+    @media screen and (min-width: 768px) {
+      font-size: 26px;
+      margin-bottom: 16px;
+  }}
+  &-title {
+    font-family: $primary-font;
+    font-style: normal;
+    color: $accent-color;
+    font-size: 34px;
+    line-height: 1.15;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 26px;
+    @media screen and (min-width: 768px) {
+font-size: 48px;
+      margin-bottom: 50px;
+    }
+  }
+  &-paragraph-one {
+  font-family: $secondary-font;
+  font-weight: 500;
+font-size: 12px;
+line-height: 1.62;
+padding-left: 35px;
+padding-right: 35px;
+margin-bottom: 26px;
+@media screen and (min-width: 768px) {
+margin-top: 50px;
+margin-bottom: 30px;
+font-size: 14px;
+line-height: 1.8;
+}}
+&-paragraph-two, &-paragraph-three {
+    font-family: $secondary-font;
+  font-weight: 500;
+font-size: 12px;
+color: $some-color;
+line-height: 1.62;
+padding-left: 35px;
+padding-right: 35px;
+margin-bottom: 17px;
+@media screen and (min-width: 768px) {
+  font-size: 14px;
+  line-height: 1.8;
+  }
+}
+&-description {
+position: relative;
+@media screen and (min-width: 768px) {
+  display: flex;
+}
+}}
+.made-description-bg {
+  position: absolute;
+  top: 504px;
+  left: 0;
+  margin-left: -20px;
+  width: 320px;
+height: 133px;
+background-image: url("../images/made-bg-min.png");
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  display: none;
+}
+}
+
+
+.made-description img {
+  width: 280px;
+  height: 279px;
+  margin-bottom: 46px;
+  @media screen and (min-width: 768px) {
+    width: 340px;
+  height: 339px;
+  }
+}
+
+.made-button {
+   padding: 14px 48.75px 13px 32px;
+    width: 176px;
+    height: 44px;
+    background-color: $white-color;
+    color: $accent-color;
+    stroke: $accent-color;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1), stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+margin-bottom: 39px;
+@media screen and (min-width: 768px) {
+margin-left: 30px;
+  }}
+
+.made-products {
+p {
+  margin-bottom: 38px;
+}
+@media screen and (min-width: 768px) {
+  display: flex;
+}
+&-number {
   font-family: $primary-font;
-  font-style: normal;
+  font-weight: normal;
+font-size: 36px;
+line-height: 1.14;
+  color: $accent-color;
+  text-transform: uppercase;
+  @media screen and (min-width: 768px) {
+    display: inline-block;
+    margin-bottom: 13px;
+  }
+}
+&-text {
+font-family: $secondary-font;
+font-style: normal;
+font-weight: bold;
+font-size: 12px;
+line-height: 1.7;
+@media screen and (min-width: 768px) {
+  display: inline-block;
+  margin-right: 60px;
+}
+}
 }
