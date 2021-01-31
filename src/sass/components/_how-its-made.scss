@@ -1,6 +1,17 @@
 .made {
   background-color: #fff5f6;
-
+  position: relative;
+  &-bg {
+    position: absolute;
+      top: 710px;
+  width: 100%;
+height: auto;
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+display: none;}
+@media screen and (min-width: 1280px) {
+  top: 310px;
+  }
+}
   &-section {
     padding-top: 125px;
     padding-bottom: 145px;
@@ -92,29 +103,7 @@ position: relative;
 @media screen and (min-width: 768px) {
   display: flex;
 }
-}}
-.made-description-bg {
-  position: absolute;
-  top: 504px;
-  left: 0;
-  margin-left: -20px;
-  width: 320px;
-height: 133px;
-background-image: url("../images/made-bg-min.png");
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-  display: none;
-}
-@media screen and (min-width: 1280px) {
-  top: 45px;
-  left: 0;
-  right: 0;
-  width: 1218px;
-height: 534px;
-background-repeat: no-repeat;
-background-size: cover;
-margin-left: -115px;
-}
-}
+}} 
 .made-description img {
   width: 280px;
   height: 279px;
@@ -130,23 +119,23 @@ margin-left: -115px;
   }
 }
 .made-button {
-   padding: 14px 48.75px 13px 32px;
-    height: 44px;
+  width: 176px;
+  height: 44px;
+  display: flex;
+    align-items: center;
+    justify-content: center;
+  margin-left: 35px;
+  margin-bottom: 39px;
+  font-weight: bold;
+    font-size: 14px;
+    line-height: 1.31;
     background-color: $white-color;
     color: $accent-color;
     stroke: $accent-color;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1), stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
-margin-bottom: 39px;
-display: flex;
-    align-items: center;
-   font-weight: 700;
-    font-size: 16px;
-    line-height: 1.31;
-    border: none;
+       border: none;
     border-radius: 22px;
-@media screen and (min-width: 768px) {
-margin-left: 30px;
-  }
+
 &:hover, &:focus{
 background-color: #d41443;
     color: #fff;
@@ -156,6 +145,12 @@ background-color: #d41443;
   & svg {
     margin-left: 13px;
   }
+  @media screen and (min-width: 768px) {
+    margin-left: 30px;
+    margin-top: 45px;
+    font-size: 16px;
+    font-weight: bold;
+      }
 }
 .made-products {
 p {
