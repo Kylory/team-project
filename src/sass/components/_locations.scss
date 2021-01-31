@@ -19,17 +19,22 @@
 }
 
 @media screen and (min-width: 1200px) {
-  background-image: url('../images/locations/locationsbg2.svg'), linear-gradient(
-    to bottom,
-    $white-color 15%,
-    rgba(255, 245, 246, 1) 15%,
-    rgba(255, 245, 246, 1) 86%);  
-
-background-repeat: no-repeat;
-  background-position: 0, 15%;
-  background-size: contain;
-  width: 100%;
-}
+    background-image: url('../images/locations/locationsbg2@1x.png'), linear-gradient(
+      to bottom,
+      $white-color 15%,
+      rgba(255, 245, 246, 1) 15%,
+      rgba(255, 245, 246, 1) 86%);  
+  
+    background-repeat: no-repeat;
+    background-position: 0, 15%;
+    background-size: contain;
+    width: 100%;
+  @media screen and (min-device-pixel-ratio: 2), 
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url('../images/locations/locationsbg2@2x.png')
+        }
+  }
   }
 
 .locations h2 {
