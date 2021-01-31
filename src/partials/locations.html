@@ -1,8 +1,19 @@
 
-<section class="locations container webp no-webp" id="locations">
+<section class="locations" id="locations">
+<picture class="second-background">
+        <source srcset="/images/locations/locationsbg2@1x.png 1x, 
+        /images/locations/locationsbg2@2x.png 2x"
+          media="(max-width: 1280px)"
+          type="image/png">
 
+        <source srcset="/images/locations/locationsbg2_wp.webp"
+            media="(max-width: 1280px)"
+            type="image/webp"> 
+      
+        <img src="/images/locations/locationsbg2@1x.png" alt="аппликации заднего фона" sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 450px">
+      </picture>    
+<div class="container">
     <h2>Locations</h2> 
-
     <ul class="list">
         <li class="item">
             <h3 class="title cafe">cafe</h3>
@@ -80,6 +91,7 @@
             <use  href="./images/sprite.svg#icon-embed"></use>
           </svg>
     </button>
+</div>
 </div>
 </section>
 
