@@ -200,7 +200,7 @@
   }
 }
 
-.hero button {
+.hero-button {
   font-family: $secondary-font;
   font-style: normal;
   font-weight: 400;
@@ -234,12 +234,14 @@
     color: $accent-color;
     background-color: $white-color;
     transform: scale(1.05);
+    cursor: pointer;
   }
 
   &:focus {
     color: $accent-color;
     background-color: $white-color;
     transform: scale(1.05);
+    cursor: pointer;
   }
 }
 
@@ -255,12 +257,14 @@
     color: $white-color;
     background-color: $accent-color;
     transform: scale(1.05);
+    cursor: pointer;
   }
 
   &:focus {
     color: $white-color;
     background-color: $accent-color;
     transform: scale(1.05);
+    cursor: pointer;
   }
 }
 
