@@ -44,13 +44,30 @@
 
 //////////
 
+// .slider-item,
+// .slick-slide,
+// .slick-current,
+// .slick-active,
+// .slick-track {
+//   &:active {
+//     border-color: transparent;
+//   }
+// }
+
 .slider {
   position: relative;
   padding-top: 120px;
 
   padding-top: 26px;
+  padding-bottom: 86px;
 
-  padding-bottom: 230px;
+  @media screen and (max-width: 767px) {
+    padding-bottom: 119px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-bottom: 132px;
+  }
 
   @include for-size(tablet) {
     padding-top: 84px;
@@ -215,43 +232,128 @@
   }
 }
 
-#r1:checked ~ .slider-navigation .first {
-  transform: scale(1.4);
-  background: url(../images/slider/house.svg) transparent no-repeat;
-  background-size: cover;
-  border-radius: 0;
-}
-#r2:checked ~ .slider-navigation .second {
-  transform: scale(1.4);
-  background: url(../images/slider/house.svg) transparent no-repeat;
-  background-size: cover;
-  border-radius: 0;
-}
-#r3:checked ~ .slider-navigation .third {
-  transform: scale(1.4);
-  background: url(../images/slider/house.svg) transparent no-repeat;
-  background-size: cover;
-  border-radius: 0;
+// #r1:checked ~ .slider-navigation .first {
+//   transform: scale(1.4);
+//   background: url(../images/slider/house.svg) transparent no-repeat;
+//   background-size: cover;
+//   border-radius: 0;
+// }
+// #r2:checked ~ .slider-navigation .second {
+//   transform: scale(1.4);
+//   background: url(../images/slider/house.svg) transparent no-repeat;
+//   background-size: cover;
+//   border-radius: 0;
+// }
+// #r3:checked ~ .slider-navigation .third {
+//   transform: scale(1.4);
+//   background: url(../images/slider/house.svg) transparent no-repeat;
+//   background-size: cover;
+//   border-radius: 0;
+// }
+
+// #r1:checked ~ .slider-item-wrapper {
+//   transform: translateX(0);
+// }
+// #r2:checked ~ .slider-item-wrapper {
+//   @media screen and (max-width: 479px) {
+//     transform: translateX(-96%);
+//   }
+//   @media screen and (min-width: 480px) and (max-width: 767px) {
+//     transform: translateX(-96%);
+//   }
+//   transform: translateX(-100%);
+// }
+// #r3:checked ~ .slider-item-wrapper {
+//   @media screen and (max-width: 479px) {
+//     transform: translateX(-192%);
+//   }
+//   @media screen and (min-width: 480px) and (max-width: 767px) {
+//     transform: translateX(-192%);
+//   }
+//   transform: translateX(-200%);
+// }
+
+/* Dots */
+.slick-dotted.slick-slider {
+  margin-bottom: 30px;
 }
 
-#r1:checked ~ .slider-item-wrapper {
-  transform: translateX(0);
+.slick-dots {
+  position: absolute;
+  bottom: -80px;
+
+  display: block;
+
+  width: 100%;
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+
+  text-align: center;
+
+  height: 70px;
 }
-#r2:checked ~ .slider-item-wrapper {
-  @media screen and (max-width: 479px) {
-    transform: translateX(-96%);
-  }
-  @media screen and (min-width: 480px) and (max-width: 767px) {
-    transform: translateX(-96%);
-  }
-  transform: translateX(-100%);
+.slick-dots li {
+  position: relative;
+
+  display: inline-block;
+
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  padding: 0;
+
+  cursor: pointer;
 }
-#r3:checked ~ .slider-item-wrapper {
-  @media screen and (max-width: 479px) {
-    transform: translateX(-192%);
-  }
-  @media screen and (min-width: 480px) and (max-width: 767px) {
-    transform: translateX(-192%);
-  }
-  transform: translateX(-200%);
+.slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+
+  display: block;
+
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+
+  cursor: pointer;
+
+  color: transparent;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+.slick-dots li button:hover,
+.slick-dots li button:focus {
+  outline: none;
+}
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
+  color: $accent-color;
+  opacity: 0.6;
+}
+.slick-dots li button:before {
+  font-family: 'slick';
+  font-size: 12px;
+  line-height: 20px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 20px;
+  height: 20px;
+
+  content: '•';
+  text-align: center;
+
+  opacity: 0.15;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.slick-dots li.slick-active button:before {
+  content: url('../images/slider/house.svg');
+  opacity: 0.8;
+  color: $accent-color;
 }
