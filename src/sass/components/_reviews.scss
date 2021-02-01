@@ -1,13 +1,10 @@
 .img-collage {
   display: block;
   width: 100%;
-  height: auto;
 }
 
 .test__1 {
   width: 100%;
-  padding-left: 20px;
-  padding-right: 20px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -16,21 +13,34 @@
   padding-bottom: 80px;
   display: flex;
   justify-content: center;
-  @media screen and (min-width: 768px) {
-    padding-bottom: 121px;
+  background: linear-gradient(#fff5f6 32%, transparent 33%);
+
+  @media screen and (max-width: 767px) {
+    background: linear-gradient(#fff5f6 21%, transparent 22%);
   }
+
   @media screen and (min-width: 768px) {
-    background: linear-gradient(#fff5f6 30%, transparent 32%);
+    background: linear-gradient(#fff5f6 29%, transparent 30.5%);
+  }
+  @media screen and (min-width: 1280px) {
+    background: linear-gradient(#fff5f6 32.5%, transparent 32.5%);
   }
 }
 
 .gallery-desk {
-  display: inline-block;
+  display: block;
   width: 100%;
   height: auto;
 }
 
-/* слайдерhh */
+/*@media screen and (min-width: 768px) {
+    padding-bottom: 121px;
+  }
+
+  @media screen and (min-width: 768px) {
+    background: linear-gradient(#fff5f6 30%, transparent 32%);
+  } 
+ */
 
 //////////
 
