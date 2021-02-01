@@ -1,13 +1,31 @@
 <section id="made-section" class="made">
-    <img class="made-bg" src="./images/made-bg-min.png" alt="">
-    <div class="made-section container">
+    <img class="made-bg" 
+    srcset=
+    "./images/made-bg-min.png 320w,
+    ./images/made-bg1280-min.png 1280w"
+    src="./images/made-bg-min.png"
+    />
+        <div class="made-section container">
         <h2 class="made-pre-title">tradition and love</h2>
         <h1 class="made-title">
             <span>how it’s made?</span>
         </h1>
         <ul class="made-description">
-            <li><img src="./images/made-img-min.png" alt="корова и кувшин молока"></li>
             <li>
+                <picture>
+                <source srcset="./images/made-img1280-webp.webp 1x, ./images/made-img1280@2x-min-webp.webp 2x, ./images/made-img1280@3x-min-webp.webp 3x" media="(min-width: 1280px)" type="image/webp" />
+                <source srcset="./images/made-img1280-min.png 1x, ./images/made-img1280@2x-min.png 2x, ./images/made-img1280@3x-min.png 3x" media="(min-width: 1280px)" />
+                
+                <source srcset="./images/made-img768-webp.webp 1x, ./images/made-img768@2x-min-webp.webp 2x, ./images/made-img768@3x-min-webp.webp 3x" media="(min-width: 768px)" type="image/webp" />
+                <source srcset="./images/made-img768-min.png 1x, ./images/made-img768@2x-min.png 2x, ./images/made-img768@3x-min.png 3x" media="(min-width: 768px)" />
+
+                <source srcset="./images/made-img-webp.webp 1x, ./images/made-img@2x-min-webp.webp 2x, ./images/made-img@3x-min-webp.webp 3x" media="(max-width: 767px)" type="image/webp" />
+                <source srcset="./images/made-img-min.png 1x, ./images/made-img@2x-min.png 2x, ./images/made-img@3x-min.png 3x" media="(max-width: 767px)" />
+                
+                <img src="./images/made-img-min.png" alt="корова и кувшин молока"/>
+            </picture>
+            </li>
+                <li>
                 <p class="made-paragraph-one"> Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus, faucibus lorem eget, egestas eros. Maecenas eleifend erat at justo fringilla.</p>
                 <p class="made-paragraph-two">Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum. Mauris rhoncus orci in imperdiet placerat. Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh, tincidunt.</p>
                 <p class="made-paragraph-three">Aliquam erat volutpat. Aenean accumsan.</p>
@@ -18,18 +36,15 @@
         </ul>
         <ul class="made-products">
             <li>
-                <svg width="33" height="50">
-                <use href="./images/made-icon1-min.png"></use></svg>
+                <img src="./images/made-icon1-min.png">
                 <p> <span class="made-products-number">721</span> <br/> <span class="made-products-text">Aliquam ac dui vel dui vulputate consectetur. Mauris massa.</span> </p>
             </li>
             <li>
-                <svg width="50" height="50">
-                <use href="./images/sprite.svg#icon-made-icon2"></use></svg>
+                <img src="./images/made-icon2-min.png">
                 <p> <span class="made-products-number">16kg</span> <br/><span class="made-products-text">Aliquam ac dui vel dui vulputate consectetur. Mauris massa.</span> </p>
             </li>
             <li>
-                <svg width="44" height="50">
-                <use href="./images/sprite.svg#icon-made-icon3"></use></svg>
+                <img src="./images/made-icon3-min.png">
                 <p> <span class="made-products-number">84</span><br/> <span class="made-products-text">Aliquam ac dui vel dui vulputate consectetur. Mauris massa.</span> </p>
             </li>
 
