@@ -31,12 +31,20 @@
 @media screen and (min-device-pixel-ratio: 2), 
 screen and (min-resolution: 192dpi),
 screen and (min-resolution: 2dppx) {
-  background-image: url('../images/locations/locationsbg2@2x.png')
+  background-image: url('../images/locations/locationsbg2@2x.png'), linear-gradient(
+    to bottom,
+    $white-color 15%,
+    rgba(255, 245, 246, 1) 15%,
+    rgba(255, 245, 246, 1) 86%);
       }
 @media screen and (min-device-pixel-ratio: 3), 
 screen and (min-resolution: 288dpi),
 screen and (min-resolution: 3dppx) {
-  background-image: url('../images/locations/locationsbg2@3x.png')
+  background-image: url('../images/locations/locationsbg2@3x.png'), linear-gradient(
+    to bottom,
+    $white-color 15%,
+    rgba(255, 245, 246, 1) 15%,
+    rgba(255, 245, 246, 1) 86%);
             }      
 }
   }
