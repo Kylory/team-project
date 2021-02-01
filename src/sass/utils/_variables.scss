@@ -1,5 +1,5 @@
-$primary-font: Titan One;
-$secondary-font: DM Sans;
+$primary-font: Titan One, sans-serif;
+$secondary-font: DM Sans, sans-serif;
 
 $accent-color: #d41443;
 $secondary-color: #ffa5ba;
@@ -19,4 +19,5 @@ $some-color: #907e82;
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
 $timing-function: cubic-bezier(0.4, 0, 0.2, 1);
