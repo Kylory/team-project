@@ -550,6 +550,7 @@ body {
 
 .page-header .navigation-list {
   display: flex;
+  margin-left: 43px;
 }
 
 .navigation-list .item:not(:last-child) {

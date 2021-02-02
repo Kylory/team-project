@@ -3,4 +3,4 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{"./..\\images\\locations\\locationsbg2@1x.png":[["locationsbg2@1x.05861149.png","tzFw"],"tzFw"],"./..\\images\\locations\\locationsbg2@2x.png":[["locationsbg2@2x.12e41e68.png","bsTt"],"bsTt"],"./..\\images\\locations\\locationsbg2@3x.png":[["locationsbg2@3x.8cfaecc5.png","gND8"],"gND8"],"./..\\images\\slider\\quotes.png":[["quotes.6b1075e1.png","CHAa"],"CHAa"],"./..\\images\\slider\\vector.svg":[["vector.f19c2f31.svg","Jarz"],"Jarz"],"./..\\images\\slider\\vector-tablet.svg":[["vector-tablet.8f4bf59b.svg","KBj7"],"KBj7"],"./..\\images\\slider\\vector-desktop.svg":[["vector-desktop.5a5a0db2.svg","O2lK"],"O2lK"],"./..\\images\\slider\\house.svg":[["house.98694a71.svg","XZlL"],"XZlL"]}],"QvaY":[function(require,module,exports) {
 "use strict";require("../sass/main.scss");
 },{"../sass/main.scss":"clu1"}]},{},["QvaY"], null)
-//# sourceMappingURL=/js.9f4292ef.js.map
+//# sourceMappingURL=c:/Program%20Files/Git/team-project/js.786e0b0b.js.map
