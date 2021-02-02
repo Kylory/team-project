@@ -7,6 +7,7 @@
 
 @import './utils/normalize';
 @import './utils/variables';
+@import './utils/mixins';
 
 @import './base/container';
 
@@ -18,3 +19,5 @@
 @import './components/main';
 @import './components/products';
 @import './components/reviews';
+@import './components/burger-menu';
+@import './components/modal';

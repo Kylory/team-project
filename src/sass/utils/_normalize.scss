@@ -288,11 +288,11 @@ summary {
 
 // Custom
 
-img {
-  display: block;
-  min-width: 100%;
-  height: auto;
-}
+// img {
+//   display: block;
+//   min-width: 100%;
+//   height: auto;
+// }
 
 ul,
 li,
@@ -311,4 +311,13 @@ ul {
 a,
 a:visited {
   text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
 }

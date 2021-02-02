@@ -1,0 +1,211 @@
+//! Modal Window
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 999;
+
+  overflow-y: scroll;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(50%, -150%) rotate(180deg) scale(0.1);
+
+  // transition: transform 1250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+//! Modal insides
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 40px;
+
+  width: calc(95% - 3px);
+  max-width: 428px;
+  height: 500px;
+  background-color: $secondary-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: 768px) {
+    width: 378px;
+    height: 500px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 428px;
+    height: 488px;
+  }
+}
+
+.button-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  stroke: $accent-color;
+  cursor: pointer;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    scale 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    stroke: #fff;
+    transform: scale(1.05);
+    background: $accent-color;
+  }
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-title {
+  margin-bottom: 12px;
+
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+
+  @media screen and (min-width: 1280px) {
+    line-height: 1.15;
+  }
+}
+
+.modal-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+
+  fill: currentColor;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form .input-container {
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.modal-form .form-label {
+  margin-bottom: 4px;
+
+  color: #fff;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+}
+
+.modal-form .form-input {
+  position: relative;
+  padding: 11px 12px 11px 42px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  cursor: pointer;
+
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  // Switch border color by hover
+  &:hover,
+  &:focus {
+    border: 1px solid $accent-color;
+    outline: none;
+  }
+}
+
+.modal-form textarea {
+  height: 120px;
+  resize: none;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  cursor: pointer;
+
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+
+  &::placeholder {
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+
+  // Switch border color by hover
+  &:hover,
+  &:focus {
+    border: 1px solid $accent-color;
+    outline: none;
+  }
+}
+
+//! Switch icon color by hover
+.modal-form .form-input:hover ~ .modal-icon,
+.modal-form .form-input:focus ~ .modal-icon {
+  fill: $accent-color;
+}
+
+.button-submit {
+  width: 200px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 55px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31;
+  text-align: center;
+
+  color: $accent-color;
+  background: #fff;
+  border: none;
+  border-radius: 22px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    background: $accent-color;
+  }
+}

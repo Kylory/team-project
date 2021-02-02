@@ -1,4 +1,297 @@
-h1 {
-  font-family: $primary-font;
-  font-style: normal;
+.img-collage {
+  display: block;
+  width: 100%;
+}
+
+.test__1 {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.reviews-gallery {
+  padding-bottom: 80px;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(#fff5f6 32%, transparent 33%);
+
+  @media screen and (max-width: 767px) {
+    background: linear-gradient(#fff5f6 21%, transparent 22%);
+  }
+
+  @media screen and (min-width: 768px) {
+    background: linear-gradient(#fff5f6 29%, transparent 30.5%);
+  }
+  @media screen and (min-width: 1280px) {
+    background: linear-gradient(#fff5f6 32.5%, transparent 32.5%);
+  }
+}
+
+.gallery-desk {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.slider {
+  position: relative;
+  padding-top: 120px;
+
+  padding-top: 26px;
+  padding-bottom: 86px;
+
+  @media screen and (max-width: 767px) {
+    padding-bottom: 119px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-bottom: 132px;
+  }
+
+  @include for-size(tablet) {
+    padding-top: 84px;
+  }
+  @include for-size(desktop) {
+    padding-top: 8px;
+  }
+
+  text-align: center;
+
+  &-container {
+    width: 320px;
+    @include for-size(tablet) {
+      width: 768px;
+    }
+
+    @include for-size(desktop) {
+      width: 1200px;
+    }
+  }
+
+  &-box {
+    margin: 0 auto;
+    overflow: hidden;
+
+    @include for-size(tablet) {
+      width: 620px;
+    }
+
+    @include for-size(desktop) {
+      width: 920px;
+    }
+  }
+
+  &-item-wrapper {
+    display: flex;
+    transition: transform 0.3s $timing-function;
+  }
+
+  &-item img {
+    margin: 0 auto 30px;
+
+    @include for-size(tablet) {
+      margin: 0 auto 20px;
+    }
+
+    @include for-size(desktop) {
+      margin: 0 auto 15px;
+    }
+  }
+
+  &-item svg {
+    width: 32px;
+    height: 4px;
+
+    fill: #c7133e;
+  }
+
+  &-review {
+    width: 280px;
+    margin: 0 auto;
+    padding: 45px 50px 10px;
+
+    background: url(../images/slider/quotes.png) no-repeat top 30px left 65px
+      #fafafa;
+
+    @include for-size(tablet) {
+      width: 620px;
+      margin: 0 auto 30px;
+      padding: 45px 40px 10px;
+
+      background-position: top 31px left 24px;
+    }
+
+    @include for-size(desktop) {
+      width: 918px;
+      margin: 0 auto 24px;
+      padding: 45px 40px 10px;
+
+      background-position: top 35px left 51px;
+    }
+  }
+
+  &-text {
+    @include fonts(12px, 500, 2.5);
+    margin: 0 auto 15px;
+    padding: 0 15px;
+    width: 180px;
+    background: url(../images/slider/vector.svg) no-repeat top 27px left 0,
+      url(../images/slider/vector.svg) no-repeat top 57px left 0,
+      url(../images/slider/vector.svg) no-repeat top 87px left 0,
+      url(../images/slider/vector.svg) no-repeat top 117px left 0,
+      url(../images/slider/vector.svg) no-repeat top 147px left 0,
+      url(../images/slider/vector.svg) no-repeat top 177px left 0,
+      url(../images/slider/vector.svg) no-repeat top 207px left 0,
+      url(../images/slider/vector.svg) no-repeat top 237px left 0;
+    @include for-size(tablet) {
+      @include fonts(14px, 500, 2.5);
+      width: 524px;
+
+      background: url(../images/slider/vector-tablet.svg) no-repeat top 30px
+          left 0,
+        url(../images/slider/vector-tablet.svg) no-repeat top 65px left 0,
+        url(../images/slider/vector-tablet.svg) no-repeat top 100px left 0;
+    }
+    @include for-size(desktop) {
+      @include fonts(16px, 500, 2.5);
+      width: 813px;
+      padding: 0 22px;
+
+      background: url(../images/slider/vector-desktop.svg) no-repeat top 33px
+          left 0,
+        url(../images/slider/vector-desktop.svg) no-repeat top 72px left 0;
+    }
+
+    & span:not(:last-child) {
+      padding-bottom: 5px;
+    }
+  }
+
+  &-name {
+    @include fonts(14px, 500, 1.85);
+    margin-top: 18px;
+
+    @include for-size(tablet) {
+      @include fonts(16px, 500, 1.81);
+      margin-top: 14px;
+    }
+
+    @include for-size(desktop) {
+      @include fonts(20px, 500, 1.85);
+      margin-top: 15px;
+    }
+  }
+
+  &-input {
+    position: absolute;
+    visibility: hidden;
+  }
+
+  &-navigation {
+    position: absolute;
+    bottom: 195px;
+    left: 50%;
+    display: flex;
+
+    transform: translateX(-50%);
+  }
+  &-button {
+    width: 12px;
+    height: 12px;
+    margin: 0 6px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 0.3s $timing-function;
+
+    &:hover {
+      background-color: #c7133e;
+    }
+  }
+}
+
+/* Dots */
+.slick-dotted.slick-slider {
+  margin-bottom: 30px;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: -80px;
+
+  display: block;
+
+  width: 100%;
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+
+  text-align: center;
+
+  height: 70px;
+}
+.slick-dots li {
+  position: relative;
+
+  display: inline-block;
+
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  padding: 0;
+
+  cursor: pointer;
+}
+.slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+
+  display: block;
+
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+
+  cursor: pointer;
+
+  color: transparent;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+.slick-dots li button:hover,
+.slick-dots li button:focus {
+  outline: none;
+}
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
+  color: $accent-color;
+  opacity: 0.6;
+}
+.slick-dots li button:before {
+  font-family: 'slick';
+  font-size: 12px;
+  line-height: 20px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 20px;
+  height: 20px;
+
+  content: '•';
+  text-align: center;
+
+  opacity: 0.15;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.slick-dots li.slick-active button:before {
+  content: url('../images/slider/house.svg');
+  opacity: 0.8;
+  color: $accent-color;
 }
