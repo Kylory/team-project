@@ -33,27 +33,6 @@
   height: auto;
 }
 
-/*@media screen and (min-width: 768px) {
-    padding-bottom: 121px;
-  }
-
-  @media screen and (min-width: 768px) {
-    background: linear-gradient(#fff5f6 30%, transparent 32%);
-  } 
- */
-
-//////////
-
-// .slider-item,
-// .slick-slide,
-// .slick-current,
-// .slick-active,
-// .slick-track {
-//   &:active {
-//     border-color: transparent;
-//   }
-// }
-
 .slider {
   position: relative;
   padding-top: 120px;
@@ -231,47 +210,6 @@
     }
   }
 }
-
-// #r1:checked ~ .slider-navigation .first {
-//   transform: scale(1.4);
-//   background: url(../images/slider/house.svg) transparent no-repeat;
-//   background-size: cover;
-//   border-radius: 0;
-// }
-// #r2:checked ~ .slider-navigation .second {
-//   transform: scale(1.4);
-//   background: url(../images/slider/house.svg) transparent no-repeat;
-//   background-size: cover;
-//   border-radius: 0;
-// }
-// #r3:checked ~ .slider-navigation .third {
-//   transform: scale(1.4);
-//   background: url(../images/slider/house.svg) transparent no-repeat;
-//   background-size: cover;
-//   border-radius: 0;
-// }
-
-// #r1:checked ~ .slider-item-wrapper {
-//   transform: translateX(0);
-// }
-// #r2:checked ~ .slider-item-wrapper {
-//   @media screen and (max-width: 479px) {
-//     transform: translateX(-96%);
-//   }
-//   @media screen and (min-width: 480px) and (max-width: 767px) {
-//     transform: translateX(-96%);
-//   }
-//   transform: translateX(-100%);
-// }
-// #r3:checked ~ .slider-item-wrapper {
-//   @media screen and (max-width: 479px) {
-//     transform: translateX(-192%);
-//   }
-//   @media screen and (min-width: 480px) and (max-width: 767px) {
-//     transform: translateX(-192%);
-//   }
-//   transform: translateX(-200%);
-// }
 
 /* Dots */
 .slick-dotted.slick-slider {

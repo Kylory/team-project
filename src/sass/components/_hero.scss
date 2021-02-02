@@ -148,7 +148,6 @@
   position: absolute;
   top: 193px;
   z-index: 2;
-  margin-bottom: 20px;
   font-weight: 400;
   font-size: 26px;
   line-height: 1.15;
@@ -192,15 +191,15 @@
   z-index: 2;
 
   @media screen and (min-width: 768px) {
-    top: 202px;
+    top: 199px;
   }
 
   @media screen and (min-width: 1280px) {
-    top: 333px;
+    top: 343px;
   }
 }
 
-.hero-button {
+.hero .button {
   font-family: $secondary-font;
   font-style: normal;
   font-weight: 400;
@@ -244,6 +243,7 @@
     cursor: pointer;
   }
 }
+
 
 .hero .button-how-its-made {
   color: $accent-color;
