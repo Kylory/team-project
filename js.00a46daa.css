@@ -664,7 +664,6 @@ body {
 .hero {
   position: relative;
   background-color: #ffb8ca;
-  margin-bottom: 125px;
 }
 .hero .container {
   position: relative;
@@ -1713,6 +1712,7 @@ h1 {
 }
 
 .products {
+  padding-top: 125px;
   text-align: center;
   margin-bottom: 98px;
 }
@@ -2244,6 +2244,182 @@ body.lock {
   color: #fff;
   transform: scale(1.05);
   stroke: currentColor;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 999;
+  overflow-y: scroll;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(50%, -150%) rotate(180deg) scale(0.1);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 40px;
+  width: calc(95% - 3px);
+  max-width: 428px;
+  height: 500px;
+  background-color: #ffa5ba;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transform: translate(-50%, -50%) scale(1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 378px;
+    height: 500px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .modal {
+    width: 428px;
+    height: 488px;
+  }
+}
+
+.button-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  stroke: #d41443;
+  cursor: pointer;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), scale 250ms cubic-bezier(0.4, 0, 0.2, 1), background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button-close:hover, .button-close:focus {
+  stroke: #fff;
+  transform: scale(1.05);
+  background: #d41443;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-title {
+  margin-bottom: 12px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+}
+@media screen and (min-width: 1280px) {
+  .modal-title {
+    line-height: 1.15;
+  }
+}
+
+.modal-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  fill: currentColor;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form .input-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.modal-form .form-label {
+  margin-bottom: 4px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+}
+
+.modal-form .form-input {
+  position: relative;
+  padding: 11px 12px 11px 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form .form-input:hover, .modal-form .form-input:focus {
+  border: 1px solid #d41443;
+  outline: none;
+}
+
+.modal-form textarea {
+  height: 120px;
+  resize: none;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+}
+.modal-form textarea::placeholder {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+.modal-form textarea:hover, .modal-form textarea:focus {
+  border: 1px solid #d41443;
+  outline: none;
+}
+
+.modal-form .form-input:hover ~ .modal-icon,
+.modal-form .form-input:focus ~ .modal-icon {
+  fill: #d41443;
+}
+
+.button-submit {
+  width: 200px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 55px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31;
+  text-align: center;
+  color: #d41443;
+  background: #fff;
+  border: none;
+  border-radius: 22px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button-submit:hover, .button-submit:focus {
+  color: #fff;
+  background: #d41443;
 }
 
 /*# sourceMappingURL=/js.00a46daa.css.map */
