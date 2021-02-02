@@ -1,11 +1,18 @@
 // Scroll for anchors
 $(document).ready(function () {
-    $("#navigation").on("click","a", function (event) {
-        event.preventDefault();
-        var id  = $(this).attr('href'),
-            top = $(id).offset().top;
-        $('body,html').animate({scrollTop: top}, 750);
-    });
+  $("#navigation").on("click","a", function (event) {
+    event.preventDefault();
+    var id  = $(this).attr('href'),
+        top = $(id).offset().top;
+    $('body,html').animate({scrollTop: top}, 750);
+  });
+
+  $("#hero").on("click","a", function (event) {
+    event.preventDefault();
+    var id  = $(this).attr('href'),
+        top = $(id).offset().top;
+    $('body,html').animate({scrollTop: top}, 750);
+  });
 });
 
 // Scroll for button
