@@ -117,38 +117,17 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/modal.js":[function(require,module,exports) {
-(function () {
-  var refs = {
-    openModalBtn: document.querySelector('[data-modal-open]'),
-    openModalBurgerBtn: document.querySelector('[data-modal-burger-menu-open]'),
-    closeModalBtn: document.querySelector('[data-modal-close]'),
-    modal: document.querySelector('[data-modal]')
-  };
-  refs.openModalBtn.addEventListener('click', toggleModal);
-  refs.openModalBurgerBtn.addEventListener('click', toggleModal);
-  refs.closeModalBtn.addEventListener('click', toggleModal);
-
-  function toggleModal() {
-    document.body.classList.toggle("modal-open");
-    refs.modal.classList.toggle('is-hidden');
-  }
-})();
-
-(function () {
-  var refs = {
-    lockOverflowBtn: document.querySelector('[data-modal-lock]'),
-    lockOverflowBurgerBtn: document.querySelector('[data-modal-burger-menu-lock]'),
-    unlockOverflowBtn: document.querySelector('[data-modal-unlock]')
-  };
-  refs.lockOverflowBtn.addEventListener('click', toggleModal);
-  refs.lockOverflowBurgerBtn.addEventListener('click', toggleModal);
-  refs.unlockOverflowBtn.addEventListener('click', toggleModal);
-
-  function toggleModal() {
-    document.body.classList.toggle("lock");
-  }
-})();
+})({"js/test.js":[function(require,module,exports) {
+$(document).ready(function () {
+  $("#menu").on("click", "a", function (event) {
+    event.preventDefault();
+    var id = $(this).attr('href'),
+        top = $(id).offset().top;
+    $('body,html').animate({
+      scrollTop: top
+    }, 1500);
+  });
+});
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -177,7 +156,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57221" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51460" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -353,5 +332,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/modal.js"], null)
-//# sourceMappingURL=/modal.4331011c.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/test.js"], null)
+//# sourceMappingURL=/test.bfc5c598.js.map
